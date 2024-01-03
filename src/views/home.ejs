@@ -1,0 +1,102 @@
+<div class="text-center">
+  <div class="row" style="display: flex; flex-wrap: nowrap">
+    <div class="col" style="text-align: left; color: #ffa500">
+      <div class="headline mb-2">
+        <h1>A comprehensive platform for reliable</h1>
+      </div>
+      <div class="subheading mt-3 text-light">
+        <h3>Job Opportunities and Internships!</h3>
+      </div>
+      <div class="subheading-1 mt-3 text-light" style="font-size: large">
+        <p>Get Discoverd and Get Hired</p>
+      </div>
+      <div class="homepage-buttons mt-4">
+        <a
+          type="button"
+          href="/jobs"
+          class="btn btn-lg mb-2"
+          style="background-color: #ffa500; color: black !important"
+        >
+          I'm a Job Seeker
+        </a>
+        <button
+          type="button"
+          class="btn btn-lg mb-2"
+          data-bs-toggle="modal"
+          data-bs-target="#recruiter-register-modal"
+          style="background-color: #ffa500; color: black"
+        >
+          I'm a Recruiter
+        </button>
+      </div>
+    </div>
+
+<!-- --------------Recruiter Registration Moda---------- -->
+<div class="modal fade" id="recruiter-register-modal" tabindex="-1" aria-labelledby="Recruiter Modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Apply Now</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/register" method="post" style="text-align: start;">
+                <div class="mb-3">
+                    <label for="name-field" class="form-label">Name</label>
+                    <input name="name" type="text" class="form-control" id="name-field" aria-describedby="name-field" placeholder="Enter your name">
+                  </div>
+                <div class="mb-3">
+                  <label for="email-field" class="form-label">Email address</label>
+                  <input name="email" type="email" class="form-control" id="email-field" aria-describedby="emailHelp" placeholder="Enter your email">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="password-field" class="form-label">Password</label>
+                  <input name="password" type="password" class="form-control" id="password-field" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-success">Register</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <span>Already Registered?</span>
+          <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#recruiter-login-modal">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------------------------------------------------ -->
+
+   <!-- -------------Recruiter Login Modal-------------- -->
+<div class="modal fade" id="recruiter-login-modal" tabindex="-1" aria-labelledby="Recruiter Modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Welcome Back!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="/login" method="post" style="text-align: start;">
+                <div class="mb-3">
+                  <label for="email-field" class="form-label">Email address</label>
+                  <input name="email" type="email" class="form-control" id="email-field" aria-describedby="emailHelp" placeholder="Enter your email">
+                </div>
+                <div class="mb-3">
+                  <label for="password-field" class="form-label">Password</label>
+                  <input name="password" type="password" class="form-control" id="password-field" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-success">Login</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ------------------------------------------------------------------ -->
+
+    <div class="col" style="margin-top: -140px;">
+            <img style="width: 500px;" src="./images/recruitment-contrast.png" alt="Recruiter">
+    </div>
+  </div>
+</div>

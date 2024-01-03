@@ -1,0 +1,50 @@
+<div class="container mx-auto p-2 d-flex align-items-centre justify-content-around flex-wrap" style="margin-top: -11%;">
+    <% jobs.forEach((i) => { %>
+      <div
+      class="card mb-3 text-light"
+      style="
+        border-style: solid;
+        border-color: white;
+        background-color: #4c29771c !important;
+        max-width: 18rem;
+        min-width: 18rem;
+      "
+    >
+      <div class="card-body d-flex align-items-centre justify-content-around flex-column" >
+        <div
+          class="mb-2"
+          style="
+            padding-inline: 5%;
+            height: min-content;
+            width: fit-content;
+            border-style: solid;
+            border-width: 2px;
+            border-radius: 5px;
+            background-color: #3c2770;
+          "
+        >
+          Actively Hiring
+          <i style="color: green" class="fa-solid fa-arrow-trend-up"></i>
+        </div>
+        <h4 class="card-title" style="color: #ffa500"><%= i.companyName %></h4>
+        <p class="card-text">
+          <%= i.jobCategory %> <span style="color: #e441ff"><%= i.designation %></span>
+        </p>
+        <p><i class="fa-solid fa-location-dot"></i><%= i.Location %></p>
+        <p><i class="fa-solid fa-indian-rupee-sign"></i><%= i.salary %></p>
+        <p>
+          <% i.skills.forEach((j) => { %>
+            <button style="border-style: solid; border-color: #5D3590 !important; color: white;" type="button" class="skills-btn-jobs btn"><%= j %></button>
+          <% }) %>
+        </p>
+        <div style="width: 100%;" class="text-center"><a href="/jobs/<%=i.id%>" class="btn btn-outline-warning text-center" style="width: 90%"
+          >View Details</a
+        ></div>
+        
+      </div>
+    </div>
+   <% }) %>
+    
+  </div>
+  
+  

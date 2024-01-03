@@ -1,0 +1,79 @@
+<div class="postjob-container">
+    <div class="card" style="width: 70%; padding: 1%">
+      <div class="card-body">
+        <h2 style="margin-top: -3%;" class="card-title text-center mb-3">Update Job</h2>
+        <form action="/update/<%= id %>" method='post'>
+  
+          <select class="form-select mb-3" aria-label="Job-Category" name="jobCategory">
+              <option selected>Select job Category</option>
+              <option value="Tech"<%= jobCategory === 'Tech'? 'selected' : '' %> >Tech</option>
+              <option value="Non Tech" <%= jobCategory === 'Non Tech'? 'selected' : '' %> >Non Tech</option>
+           </select>
+  
+           <select class="form-select mb-3" aria-label="Job-Designation" name="designation">
+              <option selected>Select job Designation</option>
+              <option value="HR"<%= designation === 'HR'? 'selected' : '' %> >HR</option>
+              <option value="SDE"<%= designation === 'SDE'? 'selected' : '' %>>SDE</option>
+              <option value="DevOps"<%= designation === 'DevOps'? 'selected' : '' %>>DevOps</option>
+              <option value="MERN Developer"<%= designation === 'MERN Developer'? 'selected' : '' %>>MERN Developer</option>
+              <option value="MEAN Developer"<%= designation === 'MEAN Developer'? 'selected' : '' %>>MEAN Developer</option>
+              <option value="JAVA Developer"<%= designation === 'JAVA Developer'? 'selected' : '' %>>JAVA Developer</option>
+              <option value="Front-End Developer"<%= designation === 'Front-End Developer'? 'selected' : '' %>>Front-End Developer</option>
+              <option value="Back-End Developer"<%= designation === 'Back-End Developer'? 'selected' : '' %>>Back-End Developer</option>
+              <option value="Full-Stack Developer"<%= designation === 'Full-Stack Developer'? 'selected' : '' %>>Full-Stack Developer</option>
+           </select>
+           
+           <div class="mb-3">
+              <label for="job-location" class="form-label">Enter Job Location</label>
+              <input value="<%= location %>"  type="text" class="form-control" id="job-location" name="location">
+           </div>
+  
+           <div class="input-group mb-3">
+              <span class="input-group-text" id="company-name">Company Name</span>
+              <input value="<%= companyName %>" type="text" class="form-control" aria-label="Company Name" name="companyName">
+            </div>
+  
+            <div class="input-group mb-3">
+              <input value="<%= salary %>" type="text" class="form-control" placeholder="Enter Salary" aria-label="salary" name="salary">
+              <span class="input-group-text">Total Positions</span>
+              <input value="<%= positions %>" type="number" class="form-control" aria-label="positions" name="positions">
+            </div>
+              
+            <select required multiple name="skills[]" class="form-select mb-3" aria-label="Skills required fo the job">
+                  <option disabled>Select skills required for this job (hold Ctrl to multi-select)</option>
+                  <option value="React" <%= skills.includes('React')?'selected' : '' %> >React</option>
+                  <option value="NodeJs" <%= skills.includes('NodeJs')?'selected' : '' %> >NodeJs</option>
+                  <option value="Angular" <%= skills.includes('Angular')?'selected' : '' %> >Angular</option>
+                  <option value="MongoDB" <%= skills.includes('MongoDB')?'selected' : '' %> >MongoDB</option>
+                  <option value="SQL" <%= skills.includes('SQL')?'selected' : '' %> >SQL</option>
+                  <option value="Express" <%= skills.includes('Express')?'selected' : '' %> >Express</option>
+                  <option value="Java" <%= skills.includes('Java')?'selected' : '' %> >Java</option>
+                  <option value="SpringBoot" <%= skills.includes('SpringBoot')?'selected' : '' %> >SpringBoot</option>
+                  <option value="C++" <%= skills.includes('C++')?'selected' : '' %> >C++</option>
+                  <option value="Data Structures &amp; Algo" <%= skills.includes("Data Structures & Algo")?'selected' : '' %> >Data Structures &amp; Algo</option>
+          </select>
+  
+              <div class="input-group mb-3">
+                  <span class="input-group-text" id="company-name">Apply By</span>
+                  <input value="<%= lastDateToApply %>" type="date" class="form-control" aria-label="Apply by" name="lastDateToApply">
+                </div>
+  
+  
+  
+            
+  
+          <div style="width: 100%;" class="text-center">
+            <button
+              style="font-size: large !important"
+              href="#"
+              type="submit"
+              class="btn btn-primary"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

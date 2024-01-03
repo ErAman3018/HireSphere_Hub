@@ -1,0 +1,204 @@
+body{
+    background-color: #110221 !important;
+    color: #FFA500;
+}
+
+nav {
+    background-color: #110221;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-width: 1px;
+    box-shadow: 0px 0px 10px 0px rgb(47, 47, 47);
+}
+.container{
+    caret-color: transparent;
+}
+
+.modal{
+    caret-color: auto !important;
+}
+
+a{
+    color: white !important;
+}
+
+
+.dropdown-item{
+    color: black !important;
+}
+
+.homepage-buttons .btn:hover{
+    background-color: #ff941b !important;
+}
+
+.subheading h3{
+    animation: myAnimation 1s ease-in-out 1s infinite alternate;
+}
+
+@keyframes myAnimation{
+    0%{
+        color: white;
+    }
+
+    /* 50%{
+        color: rgba(250,250,250,0.5);
+    } */
+
+    100%{
+        color: transparent;
+    }
+}
+
+
+/* =======404 page======= */
+.error-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #FFA500;
+}
+
+.error-title {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.error-description {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.error-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.error-button:hover {
+    background-color: #747474;
+    color: #fff;
+}
+
+.btn-outline-warning:hover{
+    color: black !important;
+}
+
+.jobs-container{
+    display: flex;
+    margin-top: -10%;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 80px;
+    flex-wrap: wrap;
+}
+
+
+/* -----Login Page------- */
+.login-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0;
+    margin-top: -3%;
+    caret-color: auto;
+}
+
+.login-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 2%;
+    width: 50%;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #110221;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.login-form label {
+    margin-bottom: 8px;
+    color: #110221;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.login-form button {
+    background-color: #110221;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #341552;
+}
+
+/* ------Jobs page---- */
+.skills-btn-jobs:hover{
+    background-color: #7451a2 !important;
+}
+
+/* ----------Post Job Form ----------- */
+.postjob-container{
+    width: 100%;
+    height: 100%;
+    margin-top: -12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    caret-color: auto;
+}
+
+.postjob-container button{
+    background-color: #341552;
+    color: #fff;
+    width: 70%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.postjob-container button:hover{
+    background-color: #5b3581;
+}
+
+/* ======Job Details======= */
+.jobdetailsbtn{
+    background-color: #341552 !important;
+}
+
+.jobdetailsbtn:hover{
+    background-color: #5b3581 !important;
+}
+
+.jobdetails-skillbtn:hover{
+    color: white !important;
+    background-color: #5b3581 !important;
+}

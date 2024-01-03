@@ -1,0 +1,58 @@
+<div class="jobs-container">
+  <h1 style="width: 100%" class="text-center text-light">
+    Applicants for <%=companyName
+  </h1>
+  <div
+    style="
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      row-gap: 50px;
+      column-gap: 50px;
+    "
+  >
+    <%if(applicants.length>0){%> 
+        <%applicants.forEach((u)=>{%>
+    <div
+      class="card mb-3 text-light"
+      style="
+        width: 19rem;
+        border-style: solid;
+        border-color: white;
+        background-color: #4c29771c !important;
+        width: 400px;
+        height: max-content;
+      "
+    >
+      <div class="card-body">
+        <ul class="list-group list-group-flush" style="border-radius: 4px">
+          <li class="list-group-item" style="background-color: #c6b9d7">
+            Name:<%=i.name%>
+          </li>
+          <li class="list-group-item" style="background-color: #c6b9d7">
+            Email:<%=i.email%>
+          </li>
+          <li class="list-group-item" style="background-color: #c6b9d7">
+            Contact:<%=i.contact%>
+          </li>
+          <li class="list-group-item" style="background-color: #c6b9d7">
+            <a href="/<%=i.resume%>" class="card-link text-dark">Resume</a>
+            <a
+              onclick="confirmDeleteApplicant('<%=i.id%>-<%=companyName%>')"
+              style="cursor: pointer"
+              class="card-link text-dark"
+              >Delete</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <%})%> 
+    <% }else{%>
+    <p style="color: white; margin-top: 50px; font-size: large">
+      There are currently no applicants for <%=companyName%>!
+    </p>
+    <%}%>
+  </div>
+</div>
